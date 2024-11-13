@@ -1,0 +1,90 @@
+[Mon, 07 Aug 2023 23:26:47] INFO [__init__.py.execute:82] Iniciando sincronizacao...
+[Mon, 07 Aug 2023 23:26:47] DEBUG [connectionpool.py._new_conn:1003] Starting new HTTPS connection (1): xml.wmsistemas.inf.br:443
+[Mon, 07 Aug 2023 23:26:48] DEBUG [connectionpool.py._make_request:456] https://xml.wmsistemas.inf.br:443 "POST /api/check HTTP/1.1" 401 43
+[Mon, 07 Aug 2023 23:26:48] INFO [__init__.py.getListToSync:76] sem conexão
+[Mon, 07 Aug 2023 23:26:48] INFO [__init__.py.execute:86] 0 para sincronizar
+[Mon, 07 Aug 2023 23:26:48] INFO [__init__.py.execute:115] Sincronizacao finalizada...
+[Mon, 07 Aug 2023 23:26:48] INFO [__init__.py.save:46] Saved preferences
+[Mon, 07 Aug 2023 23:27:36] INFO [__init__.py.execute:82] Iniciando sincronizacao...
+[Mon, 07 Aug 2023 23:27:36] DEBUG [connectionpool.py._new_conn:1003] Starting new HTTPS connection (1): xml.wmsistemas.inf.br:443
+[Mon, 07 Aug 2023 23:27:36] DEBUG [connectionpool.py._make_request:456] https://xml.wmsistemas.inf.br:443 "POST /api/check HTTP/1.1" 401 43
+[Mon, 07 Aug 2023 23:27:36] INFO [__init__.py.getListToSync:76] sem conexão
+[Mon, 07 Aug 2023 23:27:36] INFO [__init__.py.execute:86] 0 para sincronizar
+[Mon, 07 Aug 2023 23:27:36] INFO [__init__.py.execute:115] Sincronizacao finalizada...
+[Mon, 07 Aug 2023 23:27:36] INFO [__init__.py.save:46] Saved preferences
+[Mon, 07 Aug 2023 23:28:36] DEBUG [__init__.py.run:660] Running job Job(interval=1, unit=minutes, do=execute, args=(), kwargs={})
+[Mon, 07 Aug 2023 23:28:36] INFO [__init__.py.execute:82] Iniciando sincronizacao...
+[Mon, 07 Aug 2023 23:28:36] DEBUG [connectionpool.py._new_conn:1003] Starting new HTTPS connection (1): xml.wmsistemas.inf.br:443
+[Mon, 07 Aug 2023 23:28:36] DEBUG [connectionpool.py._make_request:456] https://xml.wmsistemas.inf.br:443 "POST /api/check HTTP/1.1" 401 43
+[Mon, 07 Aug 2023 23:28:36] INFO [__init__.py.getListToSync:76] sem conexão
+[Mon, 07 Aug 2023 23:28:36] INFO [__init__.py.execute:86] 0 para sincronizar
+[Mon, 07 Aug 2023 23:28:36] INFO [__init__.py.execute:115] Sincronizacao finalizada...
+[Mon, 07 Aug 2023 23:28:36] INFO [__init__.py.save:46] Saved preferences
+[Mon, 07 Aug 2023 23:28:36] DEBUG [__init__.py.run:660] Running job Job(interval=1, unit=minutes, do=deleteOldLogs, args=(), kwargs={})
+[Mon, 07 Aug 2023 23:28:36] INFO [__init__.py.deleteOldLogs:25] Deletando logs antigos
+[Mon, 07 Aug 2023 23:28:36] DEBUG [__init__.py.run:660] Running job Job(interval=1, unit=minutes, do=test, args=(), kwargs={})
+[Mon, 07 Aug 2023 23:28:36] INFO [__init__.py.test:30] Executing...
+[Mon, 07 Aug 2023 23:29:34] INFO [__init__.py.execute:82] Iniciando sincronizacao...
+[Mon, 07 Aug 2023 23:29:34] DEBUG [connectionpool.py._new_conn:1003] Starting new HTTPS connection (1): xml.wmsistemas.inf.br:443
+[Mon, 07 Aug 2023 23:29:35] DEBUG [connectionpool.py._make_request:456] https://xml.wmsistemas.inf.br:443 "POST /api/check HTTP/1.1" 401 43
+[Mon, 07 Aug 2023 23:29:35] INFO [__init__.py.getListToSync:76] sem conexão
+[Mon, 07 Aug 2023 23:29:35] INFO [__init__.py.execute:86] 0 para sincronizar
+[Mon, 07 Aug 2023 23:29:35] INFO [__init__.py.execute:115] Sincronizacao finalizada...
+[Mon, 07 Aug 2023 23:29:35] INFO [__init__.py.save:46] Saved preferences
+[Mon, 07 Aug 2023 23:30:34] DEBUG [__init__.py.run:660] Running job Job(interval=1, unit=minutes, do=execute, args=(), kwargs={})
+[Mon, 07 Aug 2023 23:30:34] INFO [__init__.py.execute:82] Iniciando sincronizacao...
+[Mon, 07 Aug 2023 23:30:34] DEBUG [connectionpool.py._new_conn:1003] Starting new HTTPS connection (1): xml.wmsistemas.inf.br:443
+[Mon, 07 Aug 2023 23:30:34] DEBUG [connectionpool.py._make_request:456] https://xml.wmsistemas.inf.br:443 "POST /api/check HTTP/1.1" 401 43
+[Mon, 07 Aug 2023 23:30:34] INFO [__init__.py.getListToSync:76] sem conexão
+[Mon, 07 Aug 2023 23:30:34] INFO [__init__.py.execute:86] 0 para sincronizar
+[Mon, 07 Aug 2023 23:30:34] INFO [__init__.py.execute:115] Sincronizacao finalizada...
+[Mon, 07 Aug 2023 23:30:34] INFO [__init__.py.save:46] Saved preferences
+[Mon, 07 Aug 2023 23:30:34] DEBUG [__init__.py.run:660] Running job Job(interval=1, unit=minutes, do=deleteOldLogs, args=(), kwargs={})
+[Mon, 07 Aug 2023 23:30:34] INFO [__init__.py.deleteOldLogs:25] Deletando logs antigos
+[Mon, 07 Aug 2023 23:30:34] DEBUG [__init__.py.run:660] Running job Job(interval=1, unit=minutes, do=test, args=(), kwargs={})
+[Mon, 07 Aug 2023 23:30:34] INFO [__init__.py.test:30] Executing...
+[Mon, 07 Aug 2023 23:31:34] DEBUG [__init__.py.run:660] Running job Job(interval=1, unit=minutes, do=execute, args=(), kwargs={})
+[Mon, 07 Aug 2023 23:31:34] INFO [__init__.py.execute:82] Iniciando sincronizacao...
+[Mon, 07 Aug 2023 23:31:35] DEBUG [connectionpool.py._new_conn:1003] Starting new HTTPS connection (1): xml.wmsistemas.inf.br:443
+[Mon, 07 Aug 2023 23:31:35] DEBUG [connectionpool.py._make_request:456] https://xml.wmsistemas.inf.br:443 "POST /api/check HTTP/1.1" 401 43
+[Mon, 07 Aug 2023 23:31:35] INFO [__init__.py.getListToSync:76] sem conexão
+[Mon, 07 Aug 2023 23:31:35] INFO [__init__.py.execute:86] 0 para sincronizar
+[Mon, 07 Aug 2023 23:31:35] INFO [__init__.py.execute:115] Sincronizacao finalizada...
+[Mon, 07 Aug 2023 23:31:35] INFO [__init__.py.save:46] Saved preferences
+[Mon, 07 Aug 2023 23:31:35] DEBUG [__init__.py.run:660] Running job Job(interval=1, unit=minutes, do=deleteOldLogs, args=(), kwargs={})
+[Mon, 07 Aug 2023 23:31:35] INFO [__init__.py.deleteOldLogs:25] Deletando logs antigos
+[Mon, 07 Aug 2023 23:31:35] DEBUG [__init__.py.run:660] Running job Job(interval=1, unit=minutes, do=test, args=(), kwargs={})
+[Mon, 07 Aug 2023 23:31:35] INFO [__init__.py.test:30] Executing...
+[Mon, 07 Aug 2023 23:32:35] DEBUG [__init__.py.run:660] Running job Job(interval=1, unit=minutes, do=execute, args=(), kwargs={})
+[Mon, 07 Aug 2023 23:32:35] INFO [__init__.py.execute:82] Iniciando sincronizacao...
+[Mon, 07 Aug 2023 23:32:35] DEBUG [connectionpool.py._new_conn:1003] Starting new HTTPS connection (1): xml.wmsistemas.inf.br:443
+[Mon, 07 Aug 2023 23:32:36] DEBUG [connectionpool.py._make_request:456] https://xml.wmsistemas.inf.br:443 "POST /api/check HTTP/1.1" 401 43
+[Mon, 07 Aug 2023 23:32:36] INFO [__init__.py.getListToSync:76] sem conexão
+[Mon, 07 Aug 2023 23:32:36] INFO [__init__.py.execute:86] 0 para sincronizar
+[Mon, 07 Aug 2023 23:32:36] INFO [__init__.py.execute:115] Sincronizacao finalizada...
+[Mon, 07 Aug 2023 23:32:36] INFO [__init__.py.save:46] Saved preferences
+[Mon, 07 Aug 2023 23:32:36] DEBUG [__init__.py.run:660] Running job Job(interval=1, unit=minutes, do=deleteOldLogs, args=(), kwargs={})
+[Mon, 07 Aug 2023 23:32:36] INFO [__init__.py.deleteOldLogs:25] Deletando logs antigos
+[Mon, 07 Aug 2023 23:32:36] DEBUG [__init__.py.run:660] Running job Job(interval=1, unit=minutes, do=test, args=(), kwargs={})
+[Mon, 07 Aug 2023 23:32:36] INFO [__init__.py.test:30] Executing...
+[Mon, 07 Aug 2023 23:33:03] INFO [__init__.py.execute:82] Iniciando sincronizacao...
+[Mon, 07 Aug 2023 23:33:03] DEBUG [connectionpool.py._new_conn:1003] Starting new HTTPS connection (1): xml.wmsistemas.inf.br:443
+[Mon, 07 Aug 2023 23:33:04] DEBUG [connectionpool.py._make_request:456] https://xml.wmsistemas.inf.br:443 "POST /api/check HTTP/1.1" 401 43
+[Mon, 07 Aug 2023 23:33:04] INFO [__init__.py.getListToSync:76] sem conexão
+[Mon, 07 Aug 2023 23:33:04] INFO [__init__.py.execute:86] 0 para sincronizar
+[Mon, 07 Aug 2023 23:33:04] INFO [__init__.py.execute:115] Sincronizacao finalizada...
+[Mon, 07 Aug 2023 23:33:04] INFO [__init__.py.save:46] Saved preferences
+[Mon, 07 Aug 2023 23:34:03] DEBUG [__init__.py.run:660] Running job Job(interval=1, unit=minutes, do=execute, args=(), kwargs={})
+[Mon, 07 Aug 2023 23:34:03] INFO [__init__.py.execute:82] Iniciando sincronizacao...
+[Mon, 07 Aug 2023 23:34:03] DEBUG [connectionpool.py._new_conn:1003] Starting new HTTPS connection (1): xml.wmsistemas.inf.br:443
+[Mon, 07 Aug 2023 23:34:04] DEBUG [connectionpool.py._make_request:456] https://xml.wmsistemas.inf.br:443 "POST /api/check HTTP/1.1" 401 43
+[Mon, 07 Aug 2023 23:34:04] INFO [__init__.py.getListToSync:76] sem conexão
+[Mon, 07 Aug 2023 23:34:04] INFO [__init__.py.execute:86] 0 para sincronizar
+[Mon, 07 Aug 2023 23:34:04] INFO [__init__.py.execute:115] Sincronizacao finalizada...
+[Mon, 07 Aug 2023 23:34:04] INFO [__init__.py.save:46] Saved preferences
+[Mon, 07 Aug 2023 23:34:04] DEBUG [__init__.py.run:660] Running job Job(interval=1, unit=minutes, do=deleteOldLogs, args=(), kwargs={})
+[Mon, 07 Aug 2023 23:34:04] INFO [__init__.py.deleteOldLogs:25] Deletando logs antigos
+[Mon, 07 Aug 2023 23:34:04] INFO [log.py.delete_old_logs:44] Deleted old log file: c:\Users\GIGABYTE\Documents\projects\portal-xml\repository\xml-sync\app\utils\../../assets/logs\xml_2023-07-04.log
+[Mon, 07 Aug 2023 23:34:04] INFO [log.py.delete_old_logs:44] Deleted old log file: c:\Users\GIGABYTE\Documents\projects\portal-xml\repository\xml-sync\app\utils\../../assets/logs\xml_2023-07-13.log
+[Mon, 07 Aug 2023 23:34:04] DEBUG [__init__.py.run:660] Running job Job(interval=1, unit=minutes, do=test, args=(), kwargs={})
+[Mon, 07 Aug 2023 23:34:04] INFO [__init__.py.test:30] Executing...

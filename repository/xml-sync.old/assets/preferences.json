@@ -1,0 +1,13 @@
+{
+    "db_password": "12345678",
+    "db_user": "sa",
+    "db_server": ".",
+    "db_name": "WM_Predileto",
+    "company": "LUIZ FERNANDO JONAS DE SOUZA",
+    "cnpj": "29.764.706/0001-01",
+    "sync_password": "123",
+    "sync_server": "https://xml.wmsistemas.inf.br",
+    "sync_time": 1,
+    "last_update": "2023-08-07 23:34:04",
+    "xml_db_name": "WM_Predileto"
+}

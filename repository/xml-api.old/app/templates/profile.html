@@ -1,0 +1,284 @@
+{% extends 'base.html' %}
+
+{% block main %}
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Cliente</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active">Cliente</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="section profile">
+      <div class="row">
+        <div class="col-xl-4">
+
+          <div class="card">
+            <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+
+              <img src="{{ url_for('static', filename='img/placeholder.png')}}" alt="Profile" class="rounded-circle">
+              <h2>{{customer.name}}</h2>
+              <h3>{{customer.email}}</h3>
+            </div>
+          </div>
+          {% if isAdmin %}
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Ações</h5>
+
+              <ul class="list-group">
+                <li class="list-group-item"><a href="/customer/{{customer.id}}"><i class="bi bi-pencil-square me-1 text-info"></i> Editar</a></li>
+                <li class="list-group-item"><a onclick="return confirm('Tem certeza que deseja excluir?')" href="/customer/delete/{{customer.id}}"><i class="bi bi-trash3 me-1 text-danger"></i> Excluir</a></li>
+                
+              </ul>
+            </div>
+          </div>
+          {% endif %}
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-download me-1 text-info"></i> Baixar XMLs</h5>
+
+              <form target="_blank" method="POST", action="/customer/zip/filter">
+                <input type="hidden" value="{{customer.id}}" name="customer_id">
+                <div class="row mb-3">
+                  <label for="inputDate">Data de Início</label>
+                  <div class="col-sm-12">
+                    <input type="date" max="{{today}}" value="{{today}}" name="start_date" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputDate">Data Final</label>
+                  <div class="col-sm-12">
+                    <input type="date" max="{{today}}" value="{{today}}" name="end_date" class="form-control">
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <label>Status</label>
+                  <div class="col-sm-12">
+                    <select class="form-select" multiple="" name="xml_status" aria-label="multiple select example">
+                      {% for status in xml_status %}
+                      <option selected value="{{status.status}}">{{status.status}}</option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary"><i class="bi bi-download me-1"></i> Baixar</button>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+    
+        </div>
+
+        <div class="col-xl-8">
+
+          <div class="card">
+            <div class="card-body pt-3">
+              <ul class="nav nav-tabs nav-tabs-bordered">
+
+                <li class="nav-item">
+                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Detalhes</button>
+                </li>
+
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">XMLs</button>
+                </li>
+
+                  <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#xml-entrada">XMLs Entradas</button>
+                </li>
+                     <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nf-inutilizadas">NF Inutilizadas</button>
+                </li>
+              </ul>
+              <div class="tab-content pt-2">
+
+                <div class="tab-pane fade show active profile-overview" id="profile-overview">
+
+                  <h5 class="card-title">Informações do Cliente</h5>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label ">Nome</div>
+                    <div class="col-lg-9 col-md-8">{{customer.name}}</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label ">CNPJ</div>
+                    <div class="col-lg-9 col-md-8">{{customer.cnpj}}</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">E-mail</div>
+                    <div class="col-lg-9 col-md-8">{{customer.email}}</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Telefone</div>
+                    <div class="col-lg-9 col-md-8">{{customer.phone}}</div>
+                  </div>
+
+                  {% if isAdmin %}
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Senha</div>
+                    <div class="col-lg-9 col-md-8">{{customer.password}}</div>
+                  </div>
+                 
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Contador</div>
+                    <div class="col-lg-9 col-md-8">{{customer.accountant.name}}</div>
+                  </div>
+                  {% endif %}
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Arquivos</div>
+                    <div class="col-lg-9 col-md-8"><span class="badge bg-primary"><i class="bi bi-folder me-1"></i> {{filesSize}}</span></div>
+                  </div>
+
+                </div>
+
+                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+
+                  <form>
+                    <div class="row mb-3">
+                    
+                     
+                      <div class="col-sm-12">
+                        <table class="table table-borderless datatable">
+                          <thead>
+                            <tr>
+                              <th scope="col">Número NF</th>
+                              <th scope="col">Modelo DF</th>
+                              <th scope="col">Status</th>
+                              <th scope="col">Emissão</th>
+                              <th scope="col"></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                           {% for xml in customer.prev_xmls %}
+                            <tr>
+                              <th scope="row"><a target="_blank" href="/xml/download/{{xml.id}}">#{{xml.nf_number.lstrip("0")}}</a></th>
+                              <td>{{xml.df_model}}</td>
+                              <td>{{xml.status}}</td>
+                              <div class="3"></div>
+                              <td>{{xml.date.strftime("%d/%m/%Y")}}</td>
+                              <td>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                  <a target="_blank" href="/xml/download/{{xml.id}}" class="btn btn-primary btn-sm"><i class="bi bi-download me-1"></i></a>
+                                </div>
+                              </td> 
+                            </tr>
+                           {% endfor %}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                   
+                  </form>
+
+                </div>
+
+                <div class="tab-pane fade profile-edit pt-3" id="xml-entrada">
+
+                  <form>
+                    <div class="row mb-3">
+                    
+                     
+                      <div class="col-sm-12">
+                        <table class="table table-borderless datatable">
+                          <thead>
+                            <tr>
+                              <th scope="col">Número NF</th>
+                              <th scope="col">Modelo DF</th>
+                              <th scope="col">Status</th>
+                              <th scope="col">Emissão</th>
+                              <th scope="col"></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                           {% for xml in customer.entrada_xmls %}
+                            <tr>
+                              <th scope="row"><a target="_blank" href="/xml/download/{{xml.id}}">#{{xml.nf_number.lstrip("0")}}</a></th>
+                              <td>{{xml.df_model}}</td>
+                              <td>{{xml.status}}</td>
+                              <div class="3"></div>
+                              <td>{{xml.date.strftime("%d/%m/%Y")}}</td>
+                              <td>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                  <a target="_blank" href="/xml/download/{{xml.id}}" class="btn btn-primary btn-sm"><i class="bi bi-download me-1"></i></a>
+                                </div>
+                              </td> 
+                            </tr>
+                           {% endfor %}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                   
+                  </form>
+
+                </div>
+
+                <div class="tab-pane fade profile-edit pt-3" id="nf-inutilizadas">
+
+                  <form>
+                    <div class="row mb-3">
+                    
+                     
+                      <div class="col-sm-12">
+                        <table class="table table-borderless datatable">
+                          <thead>
+                            <tr>
+                              <th scope="col">Número NF</th>
+                              <th scope="col">Modelo DF</th>
+                              <th scope="col">Protocolo</th>
+                              <th scope="col">Data</th>
+                              <th scope="col"></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                           {% for xml in customer.xml_inutilizados %}
+                            <tr>
+                              <th scope="row"><a target="_blank" href="/xml/download/{{xml.id}}">#{{xml.numero_nf.lstrip("0")}}</a></th>
+                              <td>{{xml.modelo_df}}</td>
+                              <td>{{xml.protocolo_inutilizacao}}</td>
+                              <div class="3"></div>
+                              <td>{{xml.data_inutilizacao.strftime("%d/%m/%Y")}}</td>
+                              <td>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                  <a target="_blank" href="/xml/download/{{xml.id}}" class="btn btn-primary btn-sm"><i class="bi bi-download me-1"></i></a>
+                                </div>
+                              </td> 
+                            </tr>
+                           {% endfor %}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                   
+                  </form>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        
+      </div>
+    </section>
+
+  </main>
+{% endblock main %}

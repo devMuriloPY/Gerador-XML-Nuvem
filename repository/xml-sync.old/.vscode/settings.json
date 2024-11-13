@@ -1,0 +1,40 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/__pycache__": true,
+        "**/*.g.dart": true,
+        ".vscode": true,
+        "venv": true,
+        ".gitignore": true,
+        "app/utils/__pycache__": true,
+        "app/database/__pycache__": true,
+        "app/icthus/__pycache__": true,
+        "app/services/__pycache__": true,
+        "app/settings/__pycache__": true,
+        "app/views/about/__pycache__": true,
+        "app/views/database/__pycache__": true,
+        "app/views/home/__pycache__": true
+    },
+    "hide-files.files": [
+        ".vscode",
+        "venv",
+        ".gitignore",
+        "app/utils/__pycache__",
+        "app/database/__pycache__",
+        "app/icthus/__pycache__",
+        "app/services/__pycache__",
+        "app/settings/__pycache__",
+        "app/views/about/__pycache__",
+        "app/views/database/__pycache__",
+        "app/views/home/__pycache__"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.formatting.provider": "none"
+}

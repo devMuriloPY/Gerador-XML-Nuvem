@@ -1,0 +1,5 @@
+APP_NAME="Portal XML - Sync"
+SECRET_KEY = 'MyS3cretK3y'
+APP_VERSION = '2023.08.08.11.39'
+
+DEBUG_MODE=True

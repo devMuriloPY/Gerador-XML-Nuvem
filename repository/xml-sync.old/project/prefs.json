@@ -1,0 +1,12 @@
+{
+    "db_password": "12345678",
+    "db_user": "sa",
+    "db_server": ".",
+    "db_name": "WM_Raphasobre",
+    "company": "",
+    "cnpj": "",
+    "sync_password": "",
+    "sync_server": "https://xml.wmsistemas.inf.br",
+    "sync_time": 60,
+    "xml_db_name": "WM_Predileto"
+}
